@@ -25,6 +25,9 @@
 
       <div class="card-body pt-1">
         <p class="card-text"><%= campground.description %></p>
+        <p>
+          <em>Submitted by <%= campground.author.username %></em>
+        </p>
       </div>
       <p class="text-right  pr-3"><a href="/campgrounds" class="btn btn-success  ">Back</a></p>
     </div>
@@ -38,7 +41,7 @@
         <% campground.comments.forEach((comment) => { %>
         <div class="float-right">10 Days Ago</div>
         <p class="pl-1 mb-2 lead">
-          <%= comment.author %>
+          <%= comment.author.username %>
         </p>
         <p class="bg-white p-3 border rounded mb-4">
           <%= comment.text %>

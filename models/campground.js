@@ -5,6 +5,13 @@ const campgroundSchema = new mongoose.Schema({
   name: String,
   image: String,
   description: String,
+  author: {
+    id: {
+      type: mongoose.Schema.Types.ObjectId,
+      username: String
+    },
+    username: String
+  },
   // ASSOCIATING ONE CAMPGROUND TO MANY COMMENTS BY REFERENCING DATA METHOD
   // THIS STORES AN OBJECT ID OF THE COMMENT IN AN ARRAY
   comments: [

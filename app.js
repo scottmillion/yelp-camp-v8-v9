@@ -18,7 +18,7 @@ const
   indexRoutes = require('./routes/index');
 
 // DELETE DATABASE AND LOAD SEED DATA
-seedDB();
+// seedDB();
 
 // APP CONFIG
 app.use(bodyParser.urlencoded({ extended: true }));
